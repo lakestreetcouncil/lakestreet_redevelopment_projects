@@ -140,12 +140,13 @@
             map.on('click', 'csvData', function (e) {
               var coordinates = e.features[0].geometry.coordinates.slice();
 
-              //set popup text
-              //You can adjust the values of the popup to match the headers of your CSV.
-              // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
+             //set popup text
+             //You can adjust the values of the popup to match the headers of your CSV.
+             // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
               var description = `<h3>` + e.features[0].properties.business +
-              `</h3>` + `<h4>` + `<b>` + `Address: ` + `</b>` + e.features[0].properties.address + `
-              </h4>` + `<h4>` + `<b>` + `Current Status: ` + `</b>` + e.features[0].properties.current_status + `</h4>`;
+              `</h3>` + `<h4>` + `<b>` + `Address: ` + `</b>` + e.features[0].properties.address +
+              `</h3>` + `<h4>` + `<b>` + `Description of Loss: ` + `</b>` + e.features[0].properties.description_of_loss  +
+              `</h4>` + `<h4>` + `<b>` + `Current Status: ` + `</b>` + e.features[0].properties.current_status + `</h4>`;
 
               // Ensure that if the map is zoomed out such that multiple
               // copies of the feature are visible, the popup appears
