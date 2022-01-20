@@ -105,7 +105,7 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/1T44K0GT7sAfcT5hccuUrmbV2_-317vWjMwyiYCaJEUk/gviz/tq?tqx=out:csv&sheet=lake_street_redevelopment_projects',
+        url: 'https://docs.google.com/spreadsheets/d/1T44K0GT7sAfcT5hccuUrmbV2_-317vWjMwyiYCaJEUk/gviz/tq?tqx=out:csv&sheet=redevelopment',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
